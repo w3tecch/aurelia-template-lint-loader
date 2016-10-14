@@ -31,6 +31,9 @@ module.exports = {
 	}
 }
 ```
+## More options and confuguration
+Behind the sence, the loader is using the following linter https://github.com/MeirionHughes/aurelia-template-lint
+
 ## Installation
 
 ``` shell
