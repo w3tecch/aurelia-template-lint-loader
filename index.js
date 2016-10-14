@@ -40,11 +40,16 @@ function lint(input, webpack, callback) {
       //Choose the right emitter
       const emitter = config.emitErrors ? webpack.emitError : webpack.emitWarning;
 
+      let errorText = '';
+
       //Loop over results if any
       results.forEach(error => {
+        //Setup error message
+        errorText += `[${error.line}, ${error.column}]: ${error.message}\r\n`;
+      });
 
-        //Setup error message and emit
-        const errorText = `[${error.line}, ${error.column}]: ${error.message}`;
+      if (results && results.length > 0) {
+        //Emit error message
         emitter(errorText);
 
         //Fail on hint
@@ -55,7 +60,7 @@ function lint(input, webpack, callback) {
           }
           throw new Error("Compilation failed due to aurelia template error errors." + messages);
         }
-      });
+      }
 
       //Call callack if asnc
       if (callback) {
