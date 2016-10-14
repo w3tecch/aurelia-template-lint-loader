@@ -1,0 +1,29 @@
+{
+  "name": "aurelia-template-lint-loader",
+  "version": "0.0.1",
+  "description": "aurelia template lint loader for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w3tecch/aurelia-template-lint-loader"
+  },
+  "keywords": [
+    "aurelia",
+    "webpack",
+    "loader",
+    "linting"
+  ],
+  "author": "David Weber",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w3tecch/aurelia-template-lint-loader/issues"
+  },
+  "homepage": "https://github.com/w3tecch/aurelia-template-lint-loader",
+  "dependencies": {
+    "aurelia-template-lint": "^0.9.15",
+    "object-assign": "^4.0.1"
+  }
+}
