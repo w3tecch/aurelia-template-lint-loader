@@ -28,9 +28,22 @@ module.exports = {
 		// if you want any file with aurelia errors to fail
 		// set failOnHint to true
 		failOnHint: true,
+
+        // aurelia does not type check by default
+        // if you want to do type checking set
+        // typeChecking to true and provide
+        // the right fileGlob
+        // reference https://github.com/MeirionHughes/aurelia-template-lint#static-type-checking
+        // these settings can also be passed with configuration above
+        typeChecking: true,
+        fileGlob: 'path/to/app-source'
+
 	}
 }
 ```
+## More options and confuguration
+Behind the sence, the loader is using the following linter https://github.com/MeirionHughes/aurelia-template-lint
+
 ## Installation
 
 ``` shell
