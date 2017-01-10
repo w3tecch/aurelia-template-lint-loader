@@ -1,6 +1,6 @@
 {
   "name": "aurelia-template-lint-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "aurelia template lint loader for webpack",
   "main": "index.js",
   "scripts": {
