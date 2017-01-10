@@ -7,8 +7,6 @@ const AureliaLinter = require('aurelia-template-lint').AureliaLinter;
 const Config = require('aurelia-template-lint').Config;
 
 function lint(input, webpack, callback) {
-  //Get bail option
-  const bailEnabled = (webpack.options.bail === true);
 
   //Get options passed to the compiler
   const config = webpack.options.aureliaTemplateLinter;
@@ -54,11 +52,8 @@ function lint(input, webpack, callback) {
 
         //Fail on hint
         if (config.failOnHint) {
-          const messages = "";
-          if (config.bailEnabled) {
-            messages = "\n\n" + webpack.resourcePath + "\n" + errorText;
-          }
-          throw new Error("Compilation failed due to aurelia template error errors." + messages);
+          let messages = "\r\n" + webpack.resourcePath + "\r\n" + errorText;
+          throw new Error("\r\n\r\nCompilation failed due to aurelia template error. Errors are:\r\n" + messages);
         }
       }
 
