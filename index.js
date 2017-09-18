@@ -61,7 +61,9 @@ function lint(input, webpack, callback) {
       if (callback) {
         callback(null, input);
       }
-    });
+    }).catch(function (e) { // fixes Node error: "DeprecationWarning: Unhandled promise rejections are deprecated.
+      callback(e);
+ });
 }
 
 module.exports = function (input, map) {
